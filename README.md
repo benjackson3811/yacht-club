@@ -33,7 +33,6 @@ View Live Wesbite here: ####
     - [Wireframe](#wireframes)
 - [Design Choices](#design-choices)
     - [Color scheme](#Color-scheme)
-    - [Categories palette](#categories-palette)
     - [Fonts and Typography](#fonts-and-typography)
 - [Features](#features)
     - [Navbar](#navbar)
@@ -191,14 +190,17 @@ The below user stories have been defined for the project.
 
 
 #### Colour Scheme
-[Back to top](#table-of-content)
----
-#### Categories palette.   
+
+The colour scheme chosen for the website is light colours with stong links to summer and sailing. They provide strong contrasts which will make the information clear and easy to read for the user.
+![Screenshot](/src/images/readme-images/palette.png)
+
 [Back to top](#table-of-content)
 ---
 #### Fonts and Typography
 
-- Roboto font used on site, fall back font is sans-serif. Example of Roboto font from
+- Ruda font used on site, fall back font is sans-serif. Example of Ruda font from.
+![Screenshot](/src/images/readme-images/ruda_font.png)
+
 
 [Back to top](#table-of-content)
 
