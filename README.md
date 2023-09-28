@@ -76,11 +76,11 @@ View Live Wesbite here: ####
 
 Yacht Club is a website for a fictional yatch club based in the UK. 
 
-[Wikipedia] (https://www.wikipedia.org/) defines the purpose of a "yacht club is to celebrate boaters and the sport of yacht racing, sailing, and cruising. What Is A Yacht Club? A yacht club is a social membership sports club for boaters."
-
-This website allows users to view and share pictures of trips taken and future trips with the Yatch club. The website functionality is designed to allow this user to search shared photos of the trips, like them and add comments to share their experiances and feedback. 
+[Wikipedia](https://www.wikipedia.org/) defines the purpose of a "yacht club is to celebrate boaters and the sport of yacht racing, sailing, and cruising. What Is A Yacht Club? A yacht club is a social membership sports club for boaters."
 
 The Yacht Club website has been created as 5th Portfolio project for the Code Institutes fullstack developer program. 
+
+The website goal is to allow users to view and share pictures of trips taken and future trips with the Yatch club.  
 
 The website is designed as a browser-based interface to enable;
 - users to create, read, comment and vote on shared content.
@@ -162,20 +162,27 @@ The below user stories have been defined for the project.
 
 #### Wireframes
 
+##### HomePage
 ![Screenshot](/src/images/readme-images/home-page.png)
 
+##### Profile Page
 ![Screenshot](/src/images/readme-images/profile-page.png)
 
+##### Sign In
 ![Screenshot](/src/images/readme-images/sign-in.png)
 
+##### Sign Up
 ![Screenshot](/src/images/readme-images/sign-up.png)
 
+##### Trip Detail
 ![Screenshot](/src/images/readme-images/trip-detail.png)
 
 [Back to top](#table-of-content)
 ---
 
 #### Database Schema
+
+![Screenshot](/src/images/readme-images/database-schema.png)
 
 [Back to top](#table-of-content)
 ---
