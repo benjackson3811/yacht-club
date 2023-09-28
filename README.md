@@ -4,7 +4,7 @@
 
 --- 
 
-This project has its own backend API. The link to this repository is [Yatch-Club-API](). 
+This project has its own backend API. The link to this repository is [](). 
 
 Live Website
 
@@ -28,25 +28,28 @@ View Live Wesbite here: ####
     - [Rating](#rating)
     - [Comment](#comments)
     - [Navigation and authentication](#navigation-and-authentication)
+- [Structure](#structure)
+    - [Database](#database)
+    - [Wireframe](#wireframes)
+- [Design Choices](#design-choices)
+    - [Color scheme](#Color-scheme)
+    - [Categories palette](#categories-palette)
+    - [Fonts and Typography](#fonts-and-typography)
 - [Features](#features)
     - [Navbar](#navbar)
     - [Sign up](#sign-up)
     - [Sign in](#sign-in)
     - [Feed](#feed)
-    - [Events Data](#events--homepage)
-    - [Event Detail](#detailed-event)
-    - [Create Event](#create-event-form)
+    - [Add Trip](#add--trip)
+    - [Trip Detail](#trip-detail)
+    - [Edit Trip](#edit-trip)
+    - [Delete Trip](#delete-trip)
     - [Profile](#profiles)
     - [Follow / Followed](#follow---followed)
     - [Comments](#comments)
     - [Categories](#categories)
     - [Footer](#footer)
-    - [User features](#user-interaction--information-popups)
     - [Future features](#future-features)
-- [Structure](#structure)
-    - [Database](#database)
-    - [Wireframe](#wireframes)
-- [Typography and color scheme](#typography-and-color-scheme)
 - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks](#frameworks)
@@ -56,7 +59,6 @@ View Live Wesbite here: ####
     - [Agile Project Management](#agile-project-management-with-github-projects)
     - [User Stories and github](#user-stories-as-github-issues)
     - [### Bug Tracking](#bug-tracking)
-    - [### Iterative Development Approach](#iterative-development-approach)
 - [Planning & Documentation](#planning--documentation)
     - [Backend](#backend)
     - [Frontend](#frontend)
@@ -86,18 +88,22 @@ The website is designed as a browser-based interface to enable;
 - search results can be filtered on username, popularity, date created, title, content keywords and category. 
 
 The project is built using React, JSX, (HTML, Javascript and CSS), specific frameworks and libraries (detailed in a below section) and connected to a separate backend API (also built for this course).
+
+[Back to top](#table-of-content)
 ---
 
 ### Site owner's goal
 
-My family are keen sailers and belong to sailing club that allows them to sail all around the UK and Northern Europe. At the minute the only place they can share their pictures is Facebook. I wanted to create a place where they could share their pictures, memories and feedback on old trips.
+My family are keen sailers and belong to sailing club that allows them to sail with friends all around the UK and Northern Europe. At the minute the only place they can share their pictures is Facebook. I wanted to create a place where they could share their pictures, memories and feedback on old trips.
 
+[Back to top](#table-of-content)
 ---
 ### Site User's goal
 
 - To create a website for club members to share their trip pictures to club members. 
 - To allow the club to show pictures of the previous adventures the members have been on. 
 
+[Back to top](#table-of-content)
 ---
 ### User Stories
 
@@ -149,33 +155,66 @@ The below user stories have been defined for the project.
 - [] Edit profile: As a logged in user I can edit my profile so that I can change my profile picture and bio
 - [] Update username and password: As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
 
+[Back to top](#table-of-content)
 ---
 
-### Wireframes
+### Structure
 
-## Typography and color scheme
+#### Wireframes
 
-#### Design Choices
+![Screenshot](/src/images/readme-images/home-page.png)
 
-#### Colour
+![Screenshot](/src/images/readme-images/profile-page.png)
 
-![screenshot]()    
+![Screenshot](/src/images/readme-images/sign-in.png)
 
-Categories palette.   
-![Screenshot]()      
+![Screenshot](/src/images/readme-images/sign-up.png)
 
+![Screenshot](/src/images/readme-images/trip-detail.png)
+
+[Back to top](#table-of-content)
+---
+
+#### Database Schema
+
+[Back to top](#table-of-content)
+---
+
+### Design Choices
+
+
+#### Colour Scheme
+[Back to top](#table-of-content)
+---
+#### Categories palette.   
+[Back to top](#table-of-content)
+---
 #### Fonts and Typography
 
 - Roboto font used on site, fall back font is sans-serif. Example of Roboto font from
-[m1.material](https://m1.material.io/style/typography.html#)     
-![screenshot](src/images/roboto_font.png)
 
-[Back up](#table-of-content)
+[Back to top](#table-of-content)
 
 ---
-
 ### Features
 
+- Navbar
+- Sign up
+- Sign in
+- Feed
+- Add Trip
+- Trip Detail
+- Edit trip
+- Delete Trip
+- Profile
+- Follow/ Followed
+- Comments
+- Categories
+- Footer
+- Future Features
+
+[Back to top](#table-of-content)
+---
 
 ### Technologies Used
 
@@ -189,6 +228,8 @@ Categories palette.
 
 - Javascript
 
+[Back to top](#table-of-content)
+---
 ### Frameworks
 
 - Django: A high-level Python web framework used for building the Yacht Club API.
@@ -197,9 +238,15 @@ Categories palette.
 
 - Cloudinary: A cloud-based media management platform used for storing and serving images in the Yacht Club project.
 
+[Back to top](#table-of-content)
+---
+
 ### Database
 
 - ElephantSQL: ElephantSQL is a PostgreSQL database as a service. It is used as the database for the Yacht Club project, providing a reliable and scalable storage solution for the application's data.
+
+[Back to top](#table-of-content)
+---
 
 ### Tools
 
@@ -219,8 +266,54 @@ Categories palette.
 
 - Font Awesome: A library of free  icons to the Yacht Club website.
 
-[Back up](#table-of-content)
+[Back to top](#table-of-content)
+---
+
+### Methodology
+
+#### Agile Project Management
+
+[Back to top](#table-of-content)
+---
+
+#### User Stories and Github
+
+[Back to top](#table-of-content)
+---
+
+### Bug Tracking
+[Back to top](#table-of-content)
+---
+
+### Planning & Documentation
+[Back to top](#table-of-content)
+---
+### Backend
+[Back to top](#table-of-content)
+---
+### Frontend
+[Back to top](#table-of-content)
+---
+### Reusable Components
+[Back to top](#table-of-content)
+---
+### Testing
+[Back to top](#table-of-content)
+---
+### Documentaion
+[Back to top](#table-of-content)
+---
+### Testing
+[Back to top](#table-of-content)
+---
+
+### Deployment
+[Back to top](#table-of-content)
+---
+
 
 ### Credits
 
 - [Wikipedia] (https://www.wikipedia.org/) - used for the description of a yacht club.
+
+[Back to top](#table-of-content)
