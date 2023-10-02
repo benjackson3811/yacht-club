@@ -11,8 +11,8 @@ As a **role** I can **capability** so that **received benefit**
 ***
 
 ### Task
--[] task 1
--[] task 2
+- [ ] task 1
+- [ ] task 2
 
 ***
 
