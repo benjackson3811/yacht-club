@@ -16,60 +16,6 @@ View Live Wesbite here: ####
 
 --- 
 
-### Table of Contents
-
-- [Project purpose and description](#project-idea-and-description)
-    - [Project Idea](#project-objective)
-    - [Site owner goal](#site-owner-goal)
-    - [Site user goal](#site-user-goal)
-- [User Stories](#user-stories)
-    - [Profile and account management](#profile-and-account-management)
-    - [Event](#events)
-    - [Rating](#rating)
-    - [Comment](#comments)
-    - [Navigation and authentication](#navigation-and-authentication)
-- [Structure](#structure)
-    - [Database](#database)
-    - [Wireframe](#wireframes)
-- [Design Choices](#design-choices)
-    - [Color scheme](#Color-scheme)
-    - [Fonts and Typography](#fonts-and-typography)
-- [Features](#features)
-    - [Navbar](#navbar)
-    - [Sign up](#sign-up)
-    - [Sign in](#sign-in)
-    - [Feed](#feed)
-    - [Add Trip](#add--trip)
-    - [Trip Detail](#trip-detail)
-    - [Edit Trip](#edit-trip)
-    - [Delete Trip](#delete-trip)
-    - [Profile](#profiles)
-    - [Follow / Followed](#follow---followed)
-    - [Comments](#comments)
-    - [Categories](#categories)
-    - [Footer](#footer)
-    - [Future features](#future-features)
-- [Technologies Used](#technologies-used)
-    - [Languages](#languages)
-    - [Frameworks](#frameworks)
-    - [Database](#database-1)
-    - [Tools](#tools)
-- [Methodology](#methodology)
-    - [Agile Project Management](#agile-project-management-with-github-projects)
-    - [User Stories and github](#user-stories-as-github-issues)
-    - [### Bug Tracking](#bug-tracking)
-- [Planning & Documentation](#planning--documentation)
-    - [Backend](#backend)
-    - [Frontend](#frontend)
-    - [Reusable Components](#reusable-components)
-    - [Testing](#testing)
-    - [Documentaion](#documentation--readmemd)
-- [Testing](#testing)
-- [Programs and tools used](#programs-and-tools-used)
-- [Deployment](#deployment)
-- [Credits](#credits)
-
---- 
 
 ### Project purpose and description
 
@@ -269,7 +215,7 @@ The colour scheme chosen for the website is light colours with stong links to su
 
 - Balsamiq: A wireframing tool for creating mockups and prototypes of the Yacht Club website.
 
-- Lucidchart: Lucidchart is a web-based diagramming tool that offers a wide range of diagramming capabilities, including ER diagrams. It provides an intuitive interface and collaboration features, making it suitable for individual and team use.
+- DrawSQL:https://drawsql.app/
 
 - Google Fonts: An open-source fonts used for typography on the Yacht Club website.
 
@@ -313,6 +259,11 @@ The colour scheme chosen for the website is light colours with stong links to su
 [Back to top](#table-of-content)
 ---
 ### Testing
+
+Validator
+w3c
+js bin
+ci linter - python
 [Back to top](#table-of-content)
 ---
 
