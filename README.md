@@ -4,8 +4,6 @@
 
 --- 
 
-This project has its own backend API. The link to this repository is [](). 
-
 Live Website
 
 View Live Wesbite here: ####
@@ -128,15 +126,16 @@ The below user stories have been defined for the project.
 ##### Data Model
 
 1. **Profile model**
+
 | Name            | Database Key    | Field Type    | Validation |
 | --------------- | --------------- | ------------- | ---------- |
-| Owner           | owner           | OneToOneField | User, on_delete=models.CASCADE,related_name='user_profile'     |
-| Avatar          | avatar          | ImageField    | upload_to='images/', default='../profilepicture>', blank=True    |
+| Owner           | owner           | OneToOneField | User, on_delete=models.CASCADE,related_name='user_profile'    |
+| Avatar          | avatar          | ImageField    | upload_to='images/', default='../profilepicture>', blank=True     |
 | Display_name    | display_name    | Charfield     | max_length=25, null=True, blank=True, related_name='user_profile'     |
-| Birth_date      | birth_date      | DateField     | null=True, blank=True     
-| Bio             | bio             | TextField     | max_length=100, null=True, blank=True    |
+| Birth_date      | birth_date      | DateField     | null=True, blank=True     |
+| Bio             | bio             | TextField     | max_length=100, null=True, blank=True     |
 | Created_at      | created_at      | DateTimeField | auto_now_add=True     |
-| updated_at      | updated_at      | DateTimeField | auto_now=True      |
+| updated_at      | updated_at      | DateTimeField | auto_now=True     |
 
 2 **User model**
 | Name            | Database Key    | Field Type    | Validation |
@@ -145,16 +144,18 @@ The below user stories have been defined for the project.
 | User.password   | user.password   | Charfield     | max_length=30, unique=True, blank=False   |
 
 3. **Comment model**
+
 | Name            | Database Key    | Field Type    | Validation |
 | --------------- | --------------- | ------------- | ---------- |
 | Owner_following | owner_following | ForeignKey    | User, related_name=’author’, on_delete=models.CASCADE     |
 | Trip            | trip            | ForeignKey    | to=Trip, on_delete=models.CASCADE, related_name='trip_comments'     |
 | Comment         | comment         | ForeignKey    | to=Trip, on_delete=models.CASCADE, related_name=’trip_comments’   |
-| Created_at      | created_at      | DateTimeField | (auto_now_add=True)   |
-| Updated_at      | updated_at      | DateTimeField | (auto_now=True)   |
+| Created_at      | created_at      | DateTimeField | auto_now_add=True   |
+| Updated_at      | updated_at      | DateTimeField | auto_now=True   |
 
 
 4. **Followers model**
+
 | Name            | Database Key    | Field Type    | Validation |
 | --------------- | --------------- | ------------- | ---------- |
 | Owner_following | owner_following | ForeignKey    | User, related_name='following', on_delete=models.CASCADE  |
@@ -186,6 +187,7 @@ TRIP_CATEGORIES = (
 | Updated_at      | updated_at      | DateTimeField | auto_now=True     |
 
 6 **Like model**
+
 | Name            | Database Key    | Field Type    | Validation |
 | --------------- | --------------- | ------------- | ---------- |
 | Owner           | owner           | ForeignKey    | to=User, on_delete=models.CASCADE, related_name='initiated_like_request_events'   |
@@ -210,6 +212,19 @@ The colour scheme chosen for the website is light colours with stong links to su
 ![Screenshot](/src/images/readme-images/ruda_font.png)
 
 ---
+
+#### Agile Project Management
+
+To manage and track the development process GitHub projects has been used.
+
+For each User Story a GitHub Issue was created, which was then allocated to a milestone (Epic). 
+
+With in each User Story the acceptance criteria has been defined to make it clear when the User Story has been completed. 
+
+The acceptance criteria are further broken down into tasks to facilitate the User Story's execution. 
+
+The issues were closed when the work is completed.
+
 ### Features
 
 1 **Navbar**
@@ -227,31 +242,22 @@ The colour scheme chosen for the website is light colours with stong links to su
 13 **Footer**
 **Future Features**
 
----
 
+---
 ### Technologies Used
 
 ### Languages
 
 - HTML / JSX (JavaScript XML)
-
 - CSS
-
 - Python
-
 - Javascript
-
 ---
 ### Frameworks
 
-- Django: A high-level Python web framework used for building the Yacht Club API.
-
-- React: A JavaScript library for building user interfaces. It is commonly used for creating dynamic and interactive components in web applications.
-
-- Cloudinary: A cloud-based media management platform used for storing and serving images in the Yacht Club project.
-
+- [Django](https://www.djangoproject.com/): A high-level Python web framework used for building the Yacht Club API.
+- [React](https://react.dev/): A JavaScript library for building user interfaces. It is commonly used for creating dynamic and interactive components in web applications.
 ---
-
 ### Database
 
 - ElephantSQL: ElephantSQL is a PostgreSQL database as a service. It is used as the database for the Yacht Club project, providing a reliable and scalable storage solution for the application's data.
@@ -260,51 +266,100 @@ The colour scheme chosen for the website is light colours with stong links to su
 
 ### Tools
 
-- Git: A distributed version control system tracking project source code changes.
-
-- GitHub: A web-based hosting service for version control repositories for storing and managing the project's source code.
-
-- Gitpod: An online integrated development environment (IDE) used for developing and testing the Yacht Club project.
-
-- Heroku: A cloud platform that enables deployment and hosting of web applications. Heroku was used for deploying the Yacht Club project to a live server.
-
-- Balsamiq: A wireframing tool for creating mockups and prototypes of the Yacht Club website.
-
-- DrawSQL:https://drawsql.app/
-
-- Google Fonts: An open-source fonts used for typography on the Yacht Club website.
-
-- Font Awesome: A library of free  icons to the Yacht Club website.
-
----
-
-### Methodology
-
-#### Agile Project Management
-
-
----
-
-### Bug Tracking
-
----
-
-### Documentaion
+- [GitHub](https://github.com/): A web-based hosting service for version control repositories for storing and managing the project's source code.
+- [Gitpod Repository](https://gitpod.io/): An online integrated development environment (IDE) used for developing and testing the Yacht Club project.
+- [Heroku](https://dashboard.heroku.com/apps): A cloud platform that enables deployment and hosting of web applications. Heroku was used for deploying the Yacht Club project to a live server.
+- [Balsamiq](https://balsamiq.com/): A wireframing tool for creating mockups and prototypes of the Yacht Club website.
+- [DrawSQL]:https://drawsql.app/ - software is a platform used to create, visualize and collaborate on your database entity relationship diagrams
+- [Google Fonts](https://fonts.google.com/): An open-source fonts used for typography on the Yacht Club website.
+- [Font Awesome](https://fontawesome.com/): A library of free  icons to the Yacht Club website.
+- [logo.com](logo.com): used to create the business logo.
+- [Wikipedia] (https://www.wikipedia.org/) - used for the description of a yacht club.
+- [Cloudinary](https://cloudinary.com/): A cloud-based media management platform used for storing and serving images in the Yacht Club project.
 
 ---
 ### Testing
 
-Validator
+please see testing.md when created for:
+
+1. **manual testing**
+2. **user testing goals**
+3. **automated testing**
+unit testing
+4. **Validation**
 w3c
 js bin
 ci linter - python
+i am responsive
+lighthouse report
+browser testing
+5. **Bug Tracking**
 
 ---
 
 ### Deployment
 
+#### Heroku
+
+To deploy this page to Heroku from its GitHub repository, the following steps were taken:
+
+#### Create the Heroku App
+
+1. Log in to [Heroku](https://dashboard.heroku.com/apps) or create an account.
+
+2. On your Heroku dashboard, click the button labelled **New** in the top right corner and from the drop-down menu select **Create new app**.
+
+3. Enter a **unique and meaningful app name** and **choose the region** which is best suited to your location.
+- Click on the **Create app** button.
+
+4. Select **Deploy** from the tabs at the top of the app page.
+
+5. Select **Connect to GitHub** from the deployment methods. 
+
+6. Search for the repository to connect to by name.
+
+7. Click **Connect**. Your app should now be connected to your GitHub account.
+
+ 8. Select **Enable Automatic Deploys** for automatic deployments.
+
+- If you would like to deploy manually, select **Deploy Branch**. If you manually deploy, you will need to re-deploy each time the repository is updated.
+
+
+- For the first time deploying to Heroku, you may have to deploy manually but if you select automatic deploys it will update from then onwards.
+
+14. Click **View** to view the deployed site.
+
+—
+
+#### Forking the GitHub Repository
+
+By forking the GitHub Repository you can make a copy of the original repository. You can view and/or make changes without affecting the original repository by using the following steps...
+
+**1.** Log in to GitHub and locate the [GitHub Repository](https://github.com/) you would like to fork.
+
+**2.** At the top of the Repository, just above the **Tabs**, locate the **Fork** Button and you should now have a copy of the repository in your account.
+
+—
+
+#### Cloning this repository
+
+**1.** Log in to GitHub and locate the [GitHub Repository](https://github.com/).
+
+**2.** On the repository main page, click the drop-down menu called **Code**.
+
+**3.** To clone the repository using HTTPS, copy the link.
+
+**4.** Open Git Bash
+
+**5.** Change the current working directory to the location where you want the cloned directory to be made.
+
+**6.** Type `git clone`, and then paste the URL you copied in Step 3.
+
+**7.** Press Enter. Your local clone will be created.
+
+
 ---
 
 ### Credits
 
-- [Wikipedia] (https://www.wikipedia.org/) - used for the description of a yacht club.
+- 
