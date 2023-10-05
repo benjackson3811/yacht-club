@@ -34,21 +34,18 @@ The website is designed as a browser-based interface to enable;
 
 The project is built using React, JSX, (HTML, Javascript and CSS), specific frameworks and libraries (detailed in a below section) and connected to a separate backend API (also built for this course).
 
-[Back to top](#table-of-content)
 ---
 
 ### Site owner's goal
 
 My family are keen sailers and belong to sailing club that allows them to sail with friends all around the UK and Northern Europe. At the minute the only place they can share their pictures is Facebook. I wanted to create a place where they could share their pictures, memories and feedback on old trips.
 
-[Back to top](#table-of-content)
 ---
 ### Site User's goal
 
 - To create a website for club members to share their trip pictures to club members. 
 - To allow the club to show pictures of the previous adventures the members have been on. 
 
-[Back to top](#table-of-content)
 ---
 ### User Stories
 
@@ -100,7 +97,6 @@ The below user stories have been defined for the project.
 - [] Edit profile: As a logged in user I can edit my profile so that I can change my profile picture and bio
 - [] Update username and password: As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
 
-[Back to top](#table-of-content)
 ---
 
 ### Structure
@@ -122,53 +118,115 @@ The below user stories have been defined for the project.
 ##### Trip Detail
 ![Screenshot](/src/images/readme-images/trip-detail.png)
 
-[Back to top](#table-of-content)
 ---
 
 #### Database Schema
 
-![Screenshot](/src/images/readme-images/database-schema.png)
+![Screenshot](/src/images/readme-images/yacht_club_database_schema.png)
 
-[Back to top](#table-of-content)
+----
+##### Data Model
+
+1. **Profile model**
+| Name            | Database Key    | Field Type    | Validation |
+| --------------- | --------------- | ------------- | ---------- |
+| Owner           | owner           | OneToOneField | User, on_delete=models.CASCADE,related_name='user_profile'     |
+| Avatar          | avatar          | ImageField    | upload_to='images/', default='../profilepicture>', blank=True    |
+| Display_name    | display_name    | Charfield     | max_length=25, null=True, blank=True, related_name='user_profile'     |
+| Birth_date      | birth_date      | DateField     | null=True, blank=True     
+| Bio             | bio             | TextField     | max_length=100, null=True, blank=True    |
+| Created_at      | created_at      | DateTimeField | auto_now_add=True     |
+| updated_at      | updated_at      | DateTimeField | auto_now=True      |
+
+2 **User model**
+| Name            | Database Key    | Field Type    | Validation |
+| --------------- | --------------- | ------------- | ---------- |
+| User.username   | user.username   | ForeignKey    | User, on_delete=models.CASCADE    |
+| User.password   | user.password   | Charfield     | max_length=30, unique=True, blank=False   |
+
+3. **Comment model**
+| Name            | Database Key    | Field Type    | Validation |
+| --------------- | --------------- | ------------- | ---------- |
+| Owner_following | owner_following | ForeignKey    | User, related_name=’author’, on_delete=models.CASCADE     |
+| Trip            | trip            | ForeignKey    | to=Trip, on_delete=models.CASCADE, related_name='trip_comments'     |
+| Comment         | comment         | ForeignKey    | to=Trip, on_delete=models.CASCADE, related_name=’trip_comments’   |
+| Created_at      | created_at      | DateTimeField | (auto_now_add=True)   |
+| Updated_at      | updated_at      | DateTimeField | (auto_now=True)   |
+
+
+4. **Followers model**
+| Name            | Database Key    | Field Type    | Validation |
+| --------------- | --------------- | ------------- | ---------- |
+| Owner_following | owner_following | ForeignKey    | User, related_name='following', on_delete=models.CASCADE  |
+| Followed        | followed        | ForeignKey    | User, related_name='followed', on_delete = models.CASCADE |
+| Created_at      | created_at      | DateTimeField | auto_now_add=True |
+
+5 **Trip model**
+
+```Python
+TRIP_CATEGORIES = (
+    ("1", "Fleet"),
+    ("2", "Racing"),
+    ("3", "Parasailing"),
+    ("4", "eSailing"),
+    ("5", "Offshore"),
+    ("6", "Cruising"),
+    ("7", "Radio"),
+)
+```
+| Name            | Database Key    | Field Type    | Validation |
+| --------------- | --------------- | ------------- | ---------- |
+| Owner           | owner           | ForeignKey    | to=User, on_delete=models.CASCADE, related_name='Trip_post’   |
+| Trip_title      | trip_title      | Charfield     | max_length=30, unique=True, blank=False  |
+| Description     | description     | TextField     | max_length=100, blank=True,related_name='Trip_post’   |
+| Image           | image           | ImageField    | trip_image, folder = trips, null = True, blank = True     |
+| Category        | category        | CharField     | max_length=255, blank=False, choices=trip_categories, default='Sightseeing'   |
+| Trip_location   | trip_location   | CharField     | max_length=255, blank=False   |
+| Created_at      | created_at      | DateTimeField | auto_now_add=True     |
+| Updated_at      | updated_at      | DateTimeField | auto_now=True     |
+
+6 **Like model**
+| Name            | Database Key    | Field Type    | Validation |
+| --------------- | --------------- | ------------- | ---------- |
+| Owner           | owner           | ForeignKey    | to=User, on_delete=models.CASCADE, related_name='initiated_like_request_events'   |
+| Trip            | trip            | ForeignKey    | Trip, on_delete=models.CASCADE, related_name=likes    |
+| Created_at      | created_at      | DateTimeField | auto_now_add=True     |
+| Updated_at      | updated_at      | DateTimeField | auto_now=True     |
+
+
 ---
 
 ### Design Choices
-
 
 #### Colour Scheme
 
 The colour scheme chosen for the website is light colours with stong links to summer and sailing. They provide strong contrasts which will make the information clear and easy to read for the user.
 ![Screenshot](/src/images/readme-images/palette.png)
 
-[Back to top](#table-of-content)
 ---
 #### Fonts and Typography
 
 - Ruda font used on site, fall back font is sans-serif. Example of Ruda font from.
 ![Screenshot](/src/images/readme-images/ruda_font.png)
 
-
-[Back to top](#table-of-content)
-
 ---
 ### Features
 
-- Navbar
-- Sign up
-- Sign in
-- Feed
-- Add Trip
-- Trip Detail
-- Edit trip
-- Delete Trip
-- Profile
-- Follow/ Followed
-- Comments
-- Categories
-- Footer
-- Future Features
+1 **Navbar**
+2 **Sign up**
+3 **Sign in**
+4 **Feed**
+5 **Add Trip**
+6 **Trip Detail**
+7 **Edit trip**
+8 **Delete Trip**
+9 **Profile**
+10 **Follow/ Followed**
+11 **Comments**
+12 **Categories**
+13 **Footer**
+**Future Features**
 
-[Back to top](#table-of-content)
 ---
 
 ### Technologies Used
@@ -183,7 +241,6 @@ The colour scheme chosen for the website is light colours with stong links to su
 
 - Javascript
 
-[Back to top](#table-of-content)
 ---
 ### Frameworks
 
@@ -193,14 +250,12 @@ The colour scheme chosen for the website is light colours with stong links to su
 
 - Cloudinary: A cloud-based media management platform used for storing and serving images in the Yacht Club project.
 
-[Back to top](#table-of-content)
 ---
 
 ### Database
 
 - ElephantSQL: ElephantSQL is a PostgreSQL database as a service. It is used as the database for the Yacht Club project, providing a reliable and scalable storage solution for the application's data.
 
-[Back to top](#table-of-content)
 ---
 
 ### Tools
@@ -221,22 +276,21 @@ The colour scheme chosen for the website is light colours with stong links to su
 
 - Font Awesome: A library of free  icons to the Yacht Club website.
 
-[Back to top](#table-of-content)
 ---
 
 ### Methodology
 
 #### Agile Project Management
 
-[Back to top](#table-of-content)
+
 ---
 
 ### Bug Tracking
-[Back to top](#table-of-content)
+
 ---
 
 ### Documentaion
-[Back to top](#table-of-content)
+
 ---
 ### Testing
 
@@ -244,15 +298,13 @@ Validator
 w3c
 js bin
 ci linter - python
-[Back to top](#table-of-content)
+
 ---
 
 ### Deployment
-[Back to top](#table-of-content)
+
 ---
 
 ### Credits
 
 - [Wikipedia] (https://www.wikipedia.org/) - used for the description of a yacht club.
-
-[Back to top](#table-of-content)
