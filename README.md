@@ -231,30 +231,10 @@ The colour scheme chosen for the website is light colours with stong links to su
 [Back to top](#table-of-content)
 ---
 
-#### User Stories and Github
-
-[Back to top](#table-of-content)
----
-
 ### Bug Tracking
 [Back to top](#table-of-content)
 ---
 
-### Planning & Documentation
-[Back to top](#table-of-content)
----
-### Backend
-[Back to top](#table-of-content)
----
-### Frontend
-[Back to top](#table-of-content)
----
-### Reusable Components
-[Back to top](#table-of-content)
----
-### Testing
-[Back to top](#table-of-content)
----
 ### Documentaion
 [Back to top](#table-of-content)
 ---
@@ -270,7 +250,6 @@ ci linter - python
 ### Deployment
 [Back to top](#table-of-content)
 ---
-
 
 ### Credits
 
